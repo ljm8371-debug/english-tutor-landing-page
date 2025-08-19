@@ -1,23 +1,223 @@
-# 원어민 1:1 회화 수업 랜딩 페이지
-
-영어 회화 수업을 위한 반응형 랜딩 페이지입니다.
-
-## 🌟 주요 기능
-- 반응형 디자인 (모바일/태블릿/데스크톱 최적화)
-- 고객 정보 수집 폼
-- 수업 후기 및 가격 정보
-- 무료 체험 수업 신청
-
-## 🚀 라이브 데모
-[웹사이트 보기](https://[사용자명].github.io/english-tutor-landing-page)
-
-## 📁 파일 구조
-- `index.html` - 메인 랜딩 페이지
-
-## 🛠️ 사용 기술
-- HTML5
-- CSS3 (Flexbox, Grid)
-- JavaScript (폼 유효성 검사)
-
-## 📞 문의
-이슈나 개선사항이 있으시면 언제든 Issues 탭에 남겨주세요!
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원어민 1:1 회화 - 영어가 고민이신가요?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+        }
+        
+        .image-section {
+            width: 100%;
+            background-color: #f8f9fa;
+        }
+        
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .form-section {
+            background: #f8fdf8;
+            padding: 50px 20px;
+        }
+        
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .form-container h2 {
+            text-align: center;
+            color: #2c5530;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c5530;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4a7c59;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #4a7c59, #6b9b73);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 600px) {
+            .form-container {
+                margin: 0 10px;
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 원본 이미지들 그대로 표시 -->
+        <div class="image-section">
+            <img src="https://i.ibb.co/DgGY1dMP/image.png" alt="원어민 1:1 회화 수업">
+        </div>
+        
+        <!-- 신청 폼 -->
+        <div class="form-section">
+            <div class="form-container">
+                <h2>무료 체험 수업 신청</h2>
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScJdeNVjM_ASDI4UGc1ZZwlkdpBCa_wBzE14luX3hXRinbang/formResponse" method="POST" target="_blank" id="applicationForm">
+                    <div class="form-group">
+                        <label for="name">이름 *</label>
+                        <input type="text" id="name" name="entry.947786473" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">연락처 *</label>
+                        <input type="tel" id="phone" name="entry.1283636187" required placeholder="010-0000-0000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">이메일</label>
+                        <input type="email" id="email" name="entry.581807531" placeholder="example@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">연령대</label>
+                        <select id="age" name="entry.1555985449">
+                            <option value="">선택해주세요</option>
+                            <option value="10대">10대</option>
+                            <option value="20대">20대</option>
+                            <option value="30대">30대</option>
+                            <option value="40대">40대</option>
+                            <option value="50대 이상">50대 이상</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level">영어 수준</label>
+                        <select id="level" name="entry.1906385483">
+                            <option value="">선택해주세요</option>
+                            <option value="초급">초급</option>
+                            <option value="중급">중급</option>
+                            <option value="고급">고급</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="goal">학습 목표</label>
+                        <select id="goal" name="entry.1331647416">
+                            <option value="">선택해주세요</option>
+                            <option value="일상 회화">일상 회화</option>
+                            <option value="비즈니스 영어">비즈니스 영어</option>
+                            <option value="여행 영어">여행 영어</option>
+                            <option value="시험 영어 (스피킹 시험)">시험 영어 (스피킹 시험)</option>
+                            <option value="기타타">기타</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time">희망 수업 시간</label>
+                        <select id="time" name="entry.837688330">
+                            <option value="">선택해주세요</option>
+                            <option value="오전">오전</option>
+                            <option value="오후">오후</option>
+                            <option value="저녁">저녁</option>
+                            <option value="상담 후 결정">상담 후 결정</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">기타 문의사항</label>
+                        <textarea id="message" name="entry.2143976712" rows="4" placeholder="궁금한 점이나 특별한 요청사항이 있으시면 적어주세요."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">무료 체험 수업 신청하기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            // 필수 필드 체크
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            
+            if (!name || !phone) {
+                e.preventDefault();
+                alert('이름과 연락처는 필수 입력 사항입니다.');
+                return;
+            }
+            
+            // 폰 번호 형식 체크
+            const phoneRegex = /^010-\d{4}-\d{4}$/;
+            if (!phoneRegex.test(phone)) {
+                e.preventDefault();
+                alert('연락처는 010-0000-0000 형식으로 입력해주세요.');
+                return;
+            }
+            
+            // 성공 메시지 (폼 제출 후)
+            setTimeout(() => {
+                alert('신청이 완료되었습니다! 24시간 내에 연락드리겠습니다.');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
